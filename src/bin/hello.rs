@@ -1,3 +1,5 @@
+const FOO: i32 = 32;
+
 // https://doc.rust-lang.org/stable/rust-by-example/hello.html
 fn main() {
     println!("Hello world!");
@@ -37,6 +39,8 @@ fn main() {
     let number: i32 = 1;
     let width: usize = 5;
     println!("{number:🌞>width$}");
+    // 按理说，constant的作用域是全局，所以自然也可以直接引用
+    println!("{FOO}");
 
     // FIXME
     println!("My name is {0}, {1} {0}", "Bond", "James");
@@ -46,6 +50,7 @@ fn main() {
     struct Structure(i32);
     impl std::fmt::Display for Structure {
         fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+            // write! 这个宏返回类型为 std::fmt::Result
             write!(f, "{}", self.0)
         }
     }
