@@ -446,6 +446,7 @@ fn diverging_functions() {
 
     sum_odd_numbers(1000);
 
+    // 与其叫“发散”函数，还不如叫“方向”函数，或者更直接点，叫“转向”函数
     fn sum_odd_numbers(up_to: u32) -> u32 {
         let mut acc = 0;
         for i in 0..up_to {

@@ -5,3 +5,4 @@
 1. [Hello World](./src/bin/hello.rs)
 2. [Primitives](./src/bin/primitives.rs)
 3. [Functions](./src/bin/functions.rs)
+4. [Flow of Control](./src/bin/flow_of_control.rs)
